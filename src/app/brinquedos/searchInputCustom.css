@@ -1,0 +1,16 @@
+.search-input-custom {
+  box-shadow: 0 2px 8px rgba(5,52,74,0.08);
+  color: #222;
+}
+
+.search-input-custon{
+  color: #222;
+  font-size: 22px;
+}
+.search-input-custom::placeholder {
+  color: #222;
+}
+
+.search-input-custom[type="text"] {
+  color: #222;
+}
