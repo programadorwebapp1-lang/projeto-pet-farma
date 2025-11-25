@@ -105,6 +105,19 @@ const PetPage = () => {
     setLoading(false);
   };
 
+  // Função para deletar pet
+  const handleDeletePet = async (id: string) => {
+    setLoading(true);
+    setError('');
+    try {
+      await api.delete(`/pets/deletar_pet/${id}`);
+      setPets(pets.filter((pet) => pet.id !== id));
+    } catch (err) {
+      setError('Erro ao deletar pet.');
+    }
+    setLoading(false);
+  };
+
   // Colunas da tabela
   const columns: GridColDef[] = [
     {
@@ -148,6 +161,23 @@ const PetPage = () => {
       field: 'id_cliente',
       headerName: 'ID Cliente',
       flex: 0.7,
+    },
+    {
+      field: 'acoes',
+      headerName: 'Ações',
+      flex: 0.7,
+      sortable: false,
+      renderCell: (params) => (
+        <Button
+          variant="contained"
+          color="error"
+          size="small"
+          onClick={() => handleDeletePet(params.row.id)}
+          sx={{ fontWeight: 'bold', borderRadius: 2 }}
+        >
+          Deletar
+        </Button>
+      ),
     },
     // ...campo 'birthDate' removido...
   ];

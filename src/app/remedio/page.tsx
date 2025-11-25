@@ -101,6 +101,16 @@ const ProdutoPage = () => {
     }
   };
 
+  // Função para deletar remédio
+  const handleDeleteProduct = async (id) => {
+    try {
+      await api.delete(`/remedios/deletar_remedio/${id}`);
+      setProducts(products.filter((product) => product.id !== id));
+    } catch (error) {
+      alert('Erro ao deletar remédio!');
+    }
+  };
+
   const columns: GridColDef[] = [
     {
       field: 'name',
@@ -144,6 +154,17 @@ const ProdutoPage = () => {
           <InventoryIcon />
           {params.value}
         </Box>
+      ),
+    },
+    {
+      field: 'actions',
+      headerName: 'Ações',
+      flex: 0.5,
+      sortable: false,
+      renderCell: (params) => (
+        <IconButton color="error" onClick={() => handleDeleteProduct(params.row.id)}>
+          <CloseIcon />
+        </IconButton>
       ),
     },
   ];

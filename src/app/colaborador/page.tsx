@@ -15,6 +15,17 @@ const COLORS = ['#FFA500', '#008000', '#000000', '#A52A2A', '#FFFFFF']; // laran
 
 const CollaboratorsPage = () => {
   const [collaborators, setCollaborators] = useState([]);
+  const [deleteError, setDeleteError] = useState('');
+  // Função para deletar colaborador
+  const handleDeleteCollaborator = async (id) => {
+    setDeleteError('');
+    try {
+      await api.delete(`/colaboradores/deletar_colaborador/${id}`);
+      setCollaborators(collaborators.filter((colab) => colab.id !== id));
+    } catch (err) {
+      setDeleteError('Erro ao deletar colaborador.');
+    }
+  };
   // Buscar colaboradores existentes na montagem
   useEffect(() => {
     const fetchCollaborators = async () => {
@@ -104,6 +115,22 @@ const CollaboratorsPage = () => {
       field: 'telefone',
       headerName: 'Telefone',
       flex: 1,
+    },
+    {
+      field: 'actions',
+      headerName: 'Ações',
+      flex: 0.7,
+      sortable: false,
+      renderCell: (params) => (
+        <Button
+          variant="outlined"
+          color="error"
+          size="small"
+          onClick={() => handleDeleteCollaborator(params.row.id)}
+        >
+          Excluir
+        </Button>
+      ),
     },
   ];
 
@@ -209,6 +236,11 @@ const CollaboratorsPage = () => {
               },
             }}
           />
+          {deleteError && (
+            <Typography color="error" sx={{ mt: 2, ml: 2 }}>
+              {deleteError}
+            </Typography>
+          )}
         </Paper>
 
         {/* Gráfico em card */}
