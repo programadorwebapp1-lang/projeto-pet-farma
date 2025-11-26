@@ -1,0 +1,133 @@
+
+.cachorro-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff;
+}
+.cachorro-titulo {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #222;
+}
+.cachorro-titulo span {
+  color: #0070f3;
+  font-weight: bold;
+}
+.cachorro-imagens {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.cachorro-img {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.cachorro-info {
+  margin-bottom: 24px;
+  color: #333;
+  font-size: 1rem;
+}
+.cachorro-lista {
+  margin-top: 8px;
+  color: #444;
+}
+.cachorro-disponivel {
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1px solid #e0e0e0;
+}
+
+.cachorro-disponivel h2 {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+.cachorro-disponivel-dados {
+  margin-bottom: 8px;
+  color: #222;
+}
+.cachorro-btn {
+  background: #fff;
+  border: 2px solid #0070f3;
+  color: #0070f3;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 12px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  transition: background 0.2s color 0.2s;
+}
+.cachorro-btn:hover {
+  background:#0070f3;
+  color: #fff;
+}
+.cachorro-btn-outline {
+  background: #fff;
+  color: #0070f3;
+  border: 2px solid #0070f3;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  transition: background 0.2s, color 0.2s;
+}
+.cachorro-btn-outline:hover {
+  background: #0070f3;
+  color: #fff;
+}
+
+.cachorro-contato {
+  margin-bottom: 24px;
+  color: black;
+}
+.cachorro-sucesso {
+  color: green;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.cachorro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cachorro-input,
+.cachorro-textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+  color: #222;
+  background: #fafafa;
+}
+.cachorro-input:focus,
+.cachorro-textarea:focus {
+  outline: none;
+  border-color: #0070f3;
+}
+.cachorro-form-btn {
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  transition: background 0.2s;
+}
+.cachorro-form-btn:hover {
+  background: #005bb5;
+}
+.cachorro-rodape {
+  text-align: center;
+  color: #333;
+  font-size: 15px;
+  margin-top: 16px;
+}

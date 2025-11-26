@@ -1,0 +1,14 @@
+.gatinho-animacao {
+  transition: transform 1.2s cubic-bezier(0.7, 0.1, 0.7, 1), opacity 0.3s;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+.gatinho-animacao.hidden {
+  opacity: 0;
+}
+.gatinho-correndo {
+  transform: translateX(80vw) translateY(-60px) scale(1.1) rotate(-10deg);
+  opacity: 1;
+}
+
+

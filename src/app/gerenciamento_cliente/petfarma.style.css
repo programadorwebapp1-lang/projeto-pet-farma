@@ -1,0 +1,175 @@
+/* Estilos modernos para tela de clientes Pet Farma */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
+.petfarma-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #DFF6FF 0%, #A8E6CF 100%);
+  font-family: 'Nunito', Arial, sans-serif;
+}
+
+.petfarma-header {
+  background: #002B3A;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem 1.2rem 1.2rem;
+  border-radius: 0 0 22px 22px;
+  box-shadow: 0 4px 24px #002b3a22;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+
+.petfarma-logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 1px;
+}
+
+
+.petfarma-search {
+  flex: 1;
+  max-width: 420px;
+  margin: 0 2rem;
+  background: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px #002b3a11;
+  padding: 0.2rem 1rem 0.2rem 1.2rem;
+  color: black;
+}
+
+
+.petfarma-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.1rem;
+  font-family: 'Nunito', Arial, sans-serif;
+  flex: 1;
+  padding: 0.7rem 0;
+}
+
+
+.petfarma-search .search-icon {
+  color: #002B3A;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+
+/* Botão '+ Adicionar Cliente' com cor personalizada */
+.petfarma-add-btn {
+  background: #2855b7;
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 30px;
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px #007bff22;
+  transition: transform 0.15s, box-shadow 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+}
+.petfarma-add-btn:hover {
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 4px 16px #007bff44;
+  background: #005fa3;
+}
+
+.petfarma-table-container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 #b2e0f7a0;
+  margin: 2.5rem auto 0 auto;
+  max-width: 900px;
+  overflow-x: auto;
+}
+
+.petfarma-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.petfarma-table th {
+  background: #DFF6FF;
+  color: #002B3A;
+  font-weight: 700;
+  font-size: 1.08rem;
+  border: none;
+  padding: 1rem 0.7rem;
+}
+
+.petfarma-table td {
+  background: #fff;
+  font-size: 1.05rem;
+  border: none;
+  padding: 0.9rem 0.7rem;
+  color: #002B3A;
+}
+
+.petfarma-table tr {
+  border-radius: 12px;
+  transition: background 0.13s;
+}
+.petfarma-table tr:hover {
+  background: #A8E6CF22;
+}
+
+.petfarma-actions {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+}
+.petfarma-action-btn {
+  border-radius: 50%;
+  background: #DFF6FF;
+  color: #007BFF;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 1px 4px #b2e0f7a0;
+}
+.petfarma-action-btn:hover {
+  background: #A8E6CF;
+  color: #002B3A;
+  transform: scale(1.13);
+}
+
+.petfarma-pet-icon {
+  position: absolute;
+  opacity: 0.13;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .petfarma-table-container {
+    margin: 1.2rem 0.2rem 0 0.2rem;
+    max-width: 100vw;
+  }
+}
+@media (max-width: 600px) {
+  .petfarma-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 0.7rem;
+  }
+  .petfarma-search {
+    margin: 0.7rem 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .petfarma-table th, .petfarma-table td {
+    font-size: 0.98rem;
+    padding: 0.6rem 0.3rem;
+  }
+}

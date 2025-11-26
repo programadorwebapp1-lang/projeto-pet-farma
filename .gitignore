@@ -1,0 +1,57 @@
+<<<<<<< HEAD
+# Ignora dependências do Node.js
+node_modules/
+
+# Ignora arquivos de build do Next.js
+.next/
+
+# Ignora logs
+=======
+# Dependências do Next.js
+.next/
+
+# Dependências do Node.js
+node_modules/
+
+# Logs
+>>>>>>> 42aba5c (Primeiro commit do projeto Pet Farma)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+<<<<<<< HEAD
+# Ignora arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignora diretórios do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignora arquivos de saída
+out/
+
+# Ignora arquivos de cache
+.cache/
+
+# Ignora arquivos de lock
+package-lock.json
+yarn.lock
+
+# Ignora arquivos do VSCode
+.vscode/
+=======
+# Ambiente
+.env
+.env.*
+
+# Outras configurações
+.DS_Store
+*.local
+
+# Build
+out/
+>>>>>>> 42aba5c (Primeiro commit do projeto Pet Farma)

@@ -1,0 +1,111 @@
+/* Mensagem de boas-vindas */
+.login-cadastro-welcome {
+  text-align: center;
+  padding: 24px 0 8px 0;
+}
+.login-cadastro-welcome h2 {
+  color: #00293B;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+.login-cadastro-welcome button {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  padding: 10px 22px;
+  background: linear-gradient(90deg, #00293B 60%, #00838F 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,41,59,0.10);
+  transition: background 0.2s;
+}
+.login-cadastro-welcome button:last-child {
+  margin-right: 0;
+}
+.login-cadastro-welcome button:hover {
+  background: linear-gradient(10deg, #00838F 0%, #00293B 100%);
+}
+.login-cadastro-bg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.login-cadastro-title {
+  color: #00293B;
+  margin-bottom: 24px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.login-cadastro-box {
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-width: 320px;
+}
+
+.login-cadastro-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.login-cadastro-btn {
+  padding: 8px 24px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  background: #e0e0e0;
+  color: black;
+}
+
+.login-cadastro-btn.active {
+  background: #00293B;
+  color: #fff;
+}
+
+.login-cadastro-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.login-cadastro-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: black;
+}
+/* Forçar placeholder preto nos navegadores modernos */
+.login-cadastro-form input::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.login-cadastro-form input:last-of-type {
+  margin-bottom: 24px;
+}
+
+.login-cadastro-form button {
+  width: 100%;
+  padding: 10px;
+  background: #00293B;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
